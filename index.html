@@ -1,0 +1,216 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinemate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>Movie Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo climate-font">Cinemate</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active">Home</li>
+                    <li class="menu-list-item">Movies</li>
+                    <li class="menu-list-item">Series</li>
+                    <li class="menu-list-item">Popular</li>
+                    <li class="menu-list-item">Trends</li>
+
+                </ul>
+            </div>
+            <div class="profile-container">
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="gallery">
+        <li class="carousel-img" style="background-image:url('carousel/carousel_img_1.jpg')"></li>
+        <li class="carousel-img" style="background-image:url('carousel/carousel_img_2.png')"></li>
+        <li class="carousel-img" style="background-image:url('carousel/carousel_img_3.jpg')"></li>
+        <li class="carousel-img" style="background-image:url('carousel/carousel_img_4.jpg')"></li>
+    </ul>
+    <div class="container">
+        <div class="content-container">
+            <div class="movie-list-container">
+                <h1 class="movie-list-title montserrat-font">NEW RELEASES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/peak.jpg" alt="">
+                            <span class="movie-list-item-title" id="movieName" data-title="Titanic" style="background-size: cover;">Titanic</span>
+                            <p class="movie-list-item-desc">Heart-wrenching tale of love and loss on the doomed ocean liner.</p>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="storeMovieDetails('Titanic', 'http://192.168.29.23:8000/Titanic/Titanic.mp4')">Watch</a>
+                        </div>                        
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/20.jpg" alt="">
+                            <span class="movie-list-item-title" id="movieName" data-title="Piper" style="background-size: cover;">Piper</span>
+                            <p class="movie-list-item-desc">A young sandpiper learns to overcome fear of the ocean waves in a beautifully animated journey.</p>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="storeMovieName('Piper')">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/1.jpeg" alt="">
+                            <span class="movie-list-item-title" id="movieName" data-title="her">Her</span>
+                            <p class="movie-list-item-desc">A lonely writer forms a deep connection with an advanced AI operating system.</p>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="storeMovieName('Her')">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/2.jpg" alt="">
+                            <span class="movie-list-item-title" id="movieName2" data-title="star wars">Star Wars</span>
+                            <p class="movie-list-item-desc">An epic space saga of heroes, villains, and the battle between good and evil.</p>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="storeMovieName('Star Wars')">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/3.jpg" alt="">
+                            <span class="movie-list-item-title" id="movieName" data-title="Edge Of Tomorrow">Edge</span>
+                            <p class="movie-list-item-desc"> A soldier relives the same day in a war against aliens, gaining combat skills.</p>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="storeMovieName('Edge Of Tomorrow')">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/4.jpg" alt="">
+                            <span class="movie-list-item-title" id="movieName" data-title="Dunkirk">Dunkirk</span>
+                            <p class="movie-list-item-desc">Intense WWII evacuation tale of bravery and survival amid relentless enemy forces and sea.</p>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="movie_title_function()">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="section.html">
+                                <img class="movie-list-item-img-more" src="img/More.png" alt="">
+                            </a>    
+                        </div>
+                        <script>
+                            function storeMovieDetails(movieName, moviePath) {
+                                localStorage.setItem('movieName', movieName);
+                                localStorage.setItem('moviePath', moviePath);
+                            }
+                        </script>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title montserrat-font">Pixar</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/99.jpg" alt="">
+                            <span class="movie-list-item-title" id="movieName" data-title="Inside Out" style="background-size: cover;">Inside Out</span>
+                            <p class="movie-list-item-desc">Pixar's imaginative journey through the emotions of a young girl navigating life's complexities.</p>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="storeMovieName('Piper')">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/98.jpg" alt="">
+                            <span class="movie-list-item-title" id="movieName" data-title="Wall-E">Wall-E</span>
+                            <p class="movie-list-item-desc">A lonely robot's quest for love and humanity's future in a post-apocalyptic world.</p>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="storeMovieName('Her')">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/97.jpg" alt="">
+                            <span class="movie-list-item-title" id="movieName2" data-title="Soul">Soul</span>
+                            <p class="movie-list-item-desc">A jazz musician's existential journey through life, death, and the meaning of existence.</p>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="storeMovieName('Star Wars')">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/95.jpg" alt="">
+                            <span class="movie-list-item-title" id="movieName" data-title="Frozen">Frozen</span>
+                            <p class="movie-list-item-desc"> Two sisters embark on an icy adventure to save their kingdom from eternal winter.</p>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="storeMovieName('Edge Of Tomorrow')">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/94.jpg" alt="">
+                            <span class="movie-list-item-title" id="movieName" data-title="Kung Fu Panda">Kung Fu Panda</span>
+                            <p class="movie-list-item-desc"> clumsy panda discovers his destiny as a martial arts hero.</p>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="movie_title_function()">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="section.html">
+                                <img class="movie-list-item-img-more" src="img/More.png" alt="">
+                            </a>    
+                        </div>
+                        <script>
+                            function storeMovieName(movieName) {
+                                localStorage.setItem('movieName', movieName);
+                            }
+                        </script>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-2.jpg');">
+                <img class="featured-title" src="img/f-t-2.png" style="background-size: cover;">
+                <p class="featured-desc">A German supernatural thriller where four interconnected families unravel a time-bending mystery spanning multiple generations in a small town.</p>
+                <button class="featured-button">WATCH</button>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">Anime</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/a1.jpg" alt="">
+                            <span class="movie-list-item-title" id="movieName" data-title="The boy and the heron" style="background-size: cover;">Heron</span>
+                            <p class="movie-list-item-desc">Pixar's imaginative journey through the emotions of a young girl navigating life's complexities.</p>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="storeMovieName('Piper')">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/a2.jpg" alt="">
+                            <span class="movie-list-item-title" id="movieName" data-title="Kimi No Na Wa">Your Name</span>
+                            <p class="movie-list-item-desc">A lonely robot's quest for love and humanity's future in a post-apocalyptic world.</p>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="storeMovieName('Her')">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/a3.jpg" alt="">
+                            <span class="movie-list-item-title" id="movieName2" data-title="Full Metal Alchemist">Full Metal</span>
+                            <p class="movie-list-item-desc">A jazz musician's existential journey through life, death, and the meaning of existence.</p>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="storeMovieName('Star Wars')">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/a4.jpg" alt="">
+                            <span class="movie-list-item-title" id="movieName" data-title="Cowboy BeBop">Cowboy BeBop</span>
+                            <p class="movie-list-item-desc"> Two sisters embark on an icy adventure to save their kingdom from eternal winter.</p>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="storeMovieName('Edge Of Tomorrow')">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/a5.jpg" alt="">
+                            <span class="movie-list-item-title" id="movieName" data-title="Samurai Champloo">Samurai Champloo</span>
+                            <a class="movie-list-item-button" href="moviePlayer.html" onclick="movie_title_function()">Watch</a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="section.html">
+                                <img class="movie-list-item-img-more" src="img/More.png" alt="">
+                            </a>    
+                        </div>
+                        <script>
+                            function storeMovieName(movieName) {
+                                localStorage.setItem('movieName', movieName);
+                            }
+                        </script>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
